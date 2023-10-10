@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!--ICONES-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        /*font-family: 'Poppins', sans-serif;*/
+        :root {
+            --darkblue: #161925;
+            --lightblue: #446688;
+            --white: #FFFCF9;
+            --green: #31AF8B;
+            --orange: #FF850A;
+            --shadow-card: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            --shadow-card2: 0 1px 10px 0 rgba(45, 54, 65, 0.2);
+        }
+
+        /*#region Global*/
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        html{
+            font-family: 'Poppins', sans-serif;
+        }
+        main {
+            background-image: url(assets/img/bg-pattern-bottom-desktop.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+
+        form {
+            background-color: var(--white);
+            box-shadow: var(--shadow-card);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 550px;
+            width: 375px;
+            border-radius: 2%;
+            padding: 1%;
+        }
+
+        form .form-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            margin-bottom: 5%;
+        }
+
+        form .form-title div {
+            width: 100%;
+        }
+        form .form-title img{
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        form .form-title div h2{
+            font-weight: 600;
+            color: var(--darkblue)
+        }
+
+        form .inputs {
+            display: flex;
+            text-align: center;
+            width: 90%;
+            flex-direction: column;
+            padding: 0px;
+            gap: 20px;
+        }
+
+        input {
+            background-color: rgb(236, 231, 231);
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            padding: 2%;
+            border: none;
+        }
+        input[type="submit"]{
+            margin-top: 5%;
+        }
+        input:focus{
+           outline: none;
+        }
+
+        .formBtn {
+            background-color: var(--darkblue);
+            border-radius: 10px;
+            padding: 1%;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.4s ease-in-out;
+            align-self: center;
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+
+        .formBtn:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form action="">
+            <div class="form-title">
+                <img src="assets/img/logos/logo-01.svg" alt="Logo Web de quebrada">
+                <div>
+                    <h2>Login</h2>
+                </div>
+            </div>
+
+            <div class="inputs">
+                <div>
+                   <!-- <i class="ri-user-line"></i> -->
+                    <input type="text" id="nome" name="nome" placeholder="Nome: ">
+                </div>
+                <div>
+                    <input type="email" id="email" name="email" required placeholder="E-mail: ">
+                </div>
+                <div>
+                    <input type="password" id="senha" name="senha" placeholder="Senha: ">
+                </div>
+                <div>
+                    <input class="formBtn" type="submit" value="Entrar">
+                </div>
+            </div>
+        </form>
+    </main>
+
+</body>
+
+</html>
